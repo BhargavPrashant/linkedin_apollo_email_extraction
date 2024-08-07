@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1152,5695.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408,4886</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -139,7 +139,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="854,5630.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1418,4821.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_url_data" />
       <Variable x:TypeArguments="x:Int32" Name="row_index" />
@@ -155,7 +155,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="792,86" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]">
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="1356,57.333333333333336" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -163,7 +163,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="792,86" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1356,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_6">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_38">
           <sap:WorkflowViewStateService.ViewState>
@@ -263,7 +263,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <If Condition="[string.IsNullOrEmpty(dt_transcationdata(in_transcation_number-1)(&quot;Apollo Email&quot;).tostring)]" DisplayName="If email is already not fetched" sap:VirtualizedContainerService.HintSize="792,5292" sap2010:WorkflowViewState.IdRef="If_6">
+    <If Condition="[string.IsNullOrEmpty(dt_transcationdata(in_transcation_number-1)(&quot;Apollo Email&quot;).tostring)]" DisplayName="If email is already not fetched" sap:VirtualizedContainerService.HintSize="1356,4540" sap2010:WorkflowViewState.IdRef="If_6">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -271,13 +271,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="758,4874" sap2010:WorkflowViewState.IdRef="Sequence_31">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1322,4122" sap2010:WorkflowViewState.IdRef="Sequence_31">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="open linkedin and extract email id" sap:VirtualizedContainerService.HintSize="696,4786" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="open linkedin and extract email id" sap:VirtualizedContainerService.HintSize="1260,4034" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="linkedin_url" />
               <Variable x:TypeArguments="x:String" Name="email_id" />
@@ -287,6 +287,7 @@
               <Variable x:TypeArguments="x:Boolean" Name="apollo_page" />
               <Variable x:TypeArguments="x:String" Name="first_name" />
               <Variable x:TypeArguments="x:String" Name="last_name" />
+              <Variable x:TypeArguments="x:Boolean" Name="no_page" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -294,7 +295,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="634,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="1198,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[email_id]</OutArgument>
               </Assign.To>
@@ -302,7 +303,7 @@
                 <InArgument x:TypeArguments="x:String">[string.Empty]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="634,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign sap:VirtualizedContainerService.HintSize="1198,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[linkedin_url]</OutArgument>
               </Assign.To>
@@ -316,7 +317,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into linkedin url" EmptyField="True" sap:VirtualizedContainerService.HintSize="634,189.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[linkedin_url]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into linkedin url" EmptyField="True" sap:VirtualizedContainerService.HintSize="1198,189.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[linkedin_url]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a0314bd1-985d-4375-836e-a738797e49c1" InformativeScreenshot="a5d1603823e808355035ba8a3b9a0b12" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin*' title='*LinkedIn*' /&gt;&lt;ctrl name='*LinkedIn*' role='pane' /&gt;&lt;ctrl name='Address and search bar' role='editable text' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
@@ -331,7 +332,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:TypeInto>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="634,86" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="1198,57.333333333333336" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="None" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5ca98664-31cb-45b6-ba46-5fd195292f19" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin*' title='*LinkedIn*' /&gt;&lt;ctrl name='*LinkedIn*' role='pane' /&gt;&lt;ctrl name='Address and search bar' role='editable text' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -349,7 +350,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:SendHotkey>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="634,86" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1198,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_12">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_64">
                   <sap:WorkflowViewStateService.ViewState>
@@ -381,130 +382,517 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="634,86" sap2010:WorkflowViewState.IdRef="CommentOut_16">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,136" sap2010:WorkflowViewState.IdRef="Sequence_71">
+            <Parallel DisplayName="Parallel -- profile name,  clicking apollo extension" sap:VirtualizedContainerService.HintSize="1198,1076.6666666666667" sap2010:WorkflowViewState.IdRef="Parallel_2">
+              <Sequence DisplayName="get profile name" sap:VirtualizedContainerService.HintSize="614,997.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence sap:VirtualizedContainerService.HintSize="512,909.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_90">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                  <Assign sap:VirtualizedContainerService.HintSize="450,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_15">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[profile_name]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[string.Empty]</InArgument>
+                    </Assign.Value>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="434,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_15">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[profile_name]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[string.Empty]</InArgument>
-                      </Assign.Value>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </Assign>
-                    <ui:RetryScope DisplayName="Retry Scope -- Get Text profile name" sap:VirtualizedContainerService.HintSize="434,57.333333333333336" sap2010:WorkflowViewState.IdRef="RetryScope_3">
-                      <ui:RetryScope.ActivityBody>
-                        <ActivityAction>
-                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="Sequence_53">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text profile name" sap:VirtualizedContainerService.HintSize="354,110" sap2010:WorkflowViewState.IdRef="GetValue_3">
-                              <ui:GetValue.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7b4ec303-90e5-45b8-b3b1-00b4e7b51312" Selector="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;&lt;webctrl tag='H1' class='text-heading*' parentclass='ember*' /&gt;" WaitForReady="COMPLETE">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                </ui:Target>
-                              </ui:GetValue.Target>
-                              <ui:GetValue.Value>
-                                <OutArgument x:TypeArguments="x:String">[profile_name]</OutArgument>
-                              </ui:GetValue.Value>
+                  </Assign>
+                  <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="True" DisplayName="While getting profile name" sap:VirtualizedContainerService.HintSize="450,456" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+                    <ui:InterruptibleWhile.Body>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,308" sap2010:WorkflowViewState.IdRef="Sequence_105">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:RetryScope DisplayName="Retry Scope -- get profile name" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="RetryScope_19">
+                          <ui:RetryScope.ActivityBody>
+                            <ActivityAction>
+                              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_110">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="aaname" DisplayName="Get Attribute -- Get Text profile name" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
+                                  <ui:GetAttribute.Result>
+                                    <OutArgument x:TypeArguments="x:String">[profile_name]</OutArgument>
+                                  </ui:GetAttribute.Result>
+                                  <ui:GetAttribute.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="50919983-4f80-4858-985a-f15033aca4bb" Selector="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;&lt;webctrl tag='H1' class='text-heading*' parentclass='ember*' /&gt;" TimeoutMS="8000" WaitForReady="COMPLETE" />
+                                  </ui:GetAttribute.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:GetAttribute>
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:RetryScope.ActivityBody>
+                          <ui:RetryScope.Condition>
+                            <ActivityFunc x:TypeArguments="x:Boolean" />
+                          </ui:RetryScope.Condition>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:RetryScope>
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_26">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_109">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                            </ui:GetValue>
-                          </Sequence>
-                        </ActivityAction>
-                      </ui:RetryScope.ActivityBody>
-                      <ui:RetryScope.Condition>
-                        <ActivityFunc x:TypeArguments="x:Boolean" />
-                      </ui:RetryScope.Condition>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:RetryScope>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,57.333333333333336" sap2010:WorkflowViewState.IdRef="LogMessage_16" Message="[profile_name]">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:LogMessage>
-                    <Assign sap:VirtualizedContainerService.HintSize="434,57.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_16">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[profile_name]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[profile_name.Trim]</InArgument>
-                      </Assign.Value>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="Assign_17">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[first_name]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[profile_name.Split(" ")(0)]</InArgument>
-                      </Assign.Value>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </Assign>
-                  </Sequence>
+                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <TryCatch.Catches>
+                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404.6666666666667,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_10">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ActivityAction x:TypeArguments="s:Exception">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                      </ActivityAction.Argument>
+                                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser linkedin" sap:VirtualizedContainerService.HintSize="450,501.3333333333333" sap2010:WorkflowViewState.IdRef="BrowserScope_9" InformativeScreenshot="bdefbd8a67cce2599896fa42d7fd9509" Selector="&lt;html app='chrome.exe' title='*LinkedIn*' /&gt;">
+                                        <ui:BrowserScope.Body>
+                                          <ActivityAction x:TypeArguments="x:Object">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,354" sap2010:WorkflowViewState.IdRef="Sequence_108">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:RefreshBrowser Browser="{x:Null}" DisplayName="Refresh Browser" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="RefreshBrowser_1" />
+                                              <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="aaname" DisplayName="Get Attribute -- Get Text profile name" sap:VirtualizedContainerService.HintSize="354,208.66666666666666" sap2010:WorkflowViewState.IdRef="GetAttribute_3">
+                                                <ui:GetAttribute.Result>
+                                                  <OutArgument x:TypeArguments="x:String">[profile_name]</OutArgument>
+                                                </ui:GetAttribute.Result>
+                                                <ui:GetAttribute.Target>
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="50919983-4f80-4858-985a-f15033aca4bb" Selector="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;&lt;webctrl tag='H1' class='text-heading*' parentclass='ember*' /&gt;" TimeoutMS="8000" WaitForReady="COMPLETE" />
+                                                </ui:GetAttribute.Target>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </ui:GetAttribute>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ui:BrowserScope.Body>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:BrowserScope>
+                                    </ActivityAction>
+                                  </Catch>
+                                </TryCatch.Catches>
+                              </TryCatch>
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:CommentOut>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="LogMessage_16" Message="[profile_name]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:LogMessage>
+                        <If Condition="[not string.IsNullOrEmpty(profile_name)]" DisplayName="If   profile_name isnot Nothing" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="If_15">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If.Then>
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_106">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:Break sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="Break_2" />
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_107">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </ui:InterruptibleWhile.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InterruptibleWhile>
+                  <Assign sap:VirtualizedContainerService.HintSize="450,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_16">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[profile_name]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[profile_name.Trim]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                  <Assign DisplayName="Assign first name" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Assign_17">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[first_name]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[profile_name.Split(" ")(0).Substring(0,1).ToUpper+profile_name.Split(" ")(0).Substring(1).ToLower]</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
                 </Sequence>
-              </ui:CommentOut.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="634,86" sap2010:WorkflowViewState.IdRef="CommentOut_14">
+              </Sequence>
+              <Sequence DisplayName="clicking apollo icon extension" sap:VirtualizedContainerService.HintSize="490,997.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_91">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_27">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,164.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_111">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser linkedin" sap:VirtualizedContainerService.HintSize="354,76.66666666666667" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="e66785f685ebc67dcb964ef1d8f92c11" Selector="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;">
+                        <ui:BrowserScope.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,255.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" sap:VirtualizedContainerService.HintSize="354,119.33333333333333" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="84afe6ee-c17f-4b0a-a7bb-74c8eae99f0d" Selector="&lt;ctrl name='*LinkedIn*' role='pane' /&gt;&lt;ctrl name='Address and search bar' role='editable text' /&gt;" TimeoutMS="2000" WaitForReady="COMPLETE" />
+                                </ui:Click.Target>
+                              </ui:Click>
+                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="CommentOut_22">
+                                <ui:CommentOut.Body>
+                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,164.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:RetryScope DisplayName="Retry Scope - apollo icon" sap:VirtualizedContainerService.HintSize="354,76.66666666666667" sap2010:WorkflowViewState.IdRef="RetryScope_10">
+                                      <ui:RetryScope.ActivityBody>
+                                        <ActivityAction>
+                                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,374" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                                              <TryCatch.Try>
+                                                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe (5)'" sap:VirtualizedContainerService.HintSize="204,54" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
+                                                  <ui:ClickImage.CursorPosition>
+                                                    <ui:CursorPosition Position="Center">
+                                                      <ui:CursorPosition.OffsetX>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:CursorPosition.OffsetX>
+                                                      <ui:CursorPosition.OffsetY>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:CursorPosition.OffsetY>
+                                                    </ui:CursorPosition>
+                                                  </ui:ClickImage.CursorPosition>
+                                                  <ui:ClickImage.Image>
+                                                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.5" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAABUCAYAAAB9czKDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAbNSURBVHhe7d1ZbFRVGMBx2mlnuhKW7nQcZ8oMiwkPRiJEHlgkigkxxohigqghJoQHsLG+YAJBCYssYoS4RQSCKBG1LWurAhE0Yhplayjd9850Ou2UQmmBfJ7vzJw7d+7c297OQhW+h38mDj59v3vPuWeazIzp6/VAON3wdumut8cdkre7M6Qej0uqu8vpzwUet1Oqq7OD53ax2Gunq13K5WrjOZ2tvjpaeB3tzdDe1sRra2301eKrtbmB19JUD82NdbymhlpeY30Nr6GuWqq+lsVe62qv82prqqRqqq+x8LUKvF4v7+zZs0NGAARAAKoDHi61QWtFANoRwIMIoDVs5YA97g5eb2M59F3dCv1/vQ63zy+EO6enw+AvDn9TYODnQLf99Zez2Ost9iq6Webg9fm7ccpX70kHeE/46hEdn8LrPubgeY46oMufu9RXZ4kvV3EgZ7EdnCV26GCvWPtPgdp+xBy8UQNQDh+TD14+fBz8rX8K4e6Z6XD39BS486tDigCGSe/w5Vd+YFlxQt+1T2Dg/Dw+eBEBjCA9APKlRwwer/yblR9KVz0BqAxXT3qHjwUNv2o33FMZPgGMML3DV675g2zZuacyfAIYYXoAxNqPw8f6Lxby4RNAoIgBhhu+uPq9DWVs6XmMABRFFUAMXwCItb+rs50/54vhE0CgiADkw5cDKK9+BLjNDlkEEFrMAMTVjwBuVxsM/r6QAFQKG2Co4Suv/k5na9D6TwCBYgIgv/olADZgAggtqgBqVz8uP64OAtAqKgBDLT8EoD54UVgAWo+fBPAfAJAP37f+t4GzvYUANIopAF79BKA+eFHUALSWHwJQH7woYgD51a8FgH+TJQD1Yg6AGzABaEcADxIADl8OgMsPAagPXkQABBA7APdROx8+AYwSwLo3MmDbqqyHDwCHP9oA1w7aICXZAGmpBqg/XPDwAMifgEYTYPFTaTAmLo73yoKxBHA/AY5uMUvDF5XtMHOAz4pyIWt8ImSPN/KuH5xMANEE8Bx3gDXPGAJgN5v4v+HVv+CJVIiLi4e1yzLpDog2wHvLM0KGL9r4VhYHKN9phkmZRjZsWoKiClB5wAZJpnhp4DMKkoLuhtQUA9+cEWH7qhzaA6IN8MyTgY0XO/OxBUo2B+8HL85Np004FgDfvz8paNBL5o+VTsKLZgXDnNpuJoBoAnSzzTU/K1EaMD7/1xyySQCV+61gMsZL/44bMg6WABSFC7D2tYnScLENKzL5WeDcHgtc/trKT8JFrwb/P+vfZBsyAUQOcHW/Lejqxk3Xc8zOAWZOS4HnZqdxABxWXmbgLklOMrA7o4AAIgWY93iqNFQMD2E4/N2FOdJ7xZvy+SFs39o86T08Bzw/ZywBRAJweEPwxrtodjo/C7QcKYBx6QnS+1MtJumjiDkzUvh7CID98EE+AYQD0FVqB3N24Bk/ISEeruyzcYAVi8dJ72OFL0+QAC58/ijEGwIAtlwTG6ydAEYK8O7S4E31naUT+PArvrRCXHzgfUuuEToZlgDoYa18YbwEgOFHEgTA0gtwdZ8VjImBjTc3I5ENzM4BlHvCsa3mkL8HtByZzD+QEwBJJgNc3GsjAL0A83HIYwJDxs0VH0c/Wp0dNPyX5vkOY2p/kNnzdo4EgC2alU4AegC+XceeZHD4fgDcB/Aqx3Ve/jmQkT2aVh6wagLgGWDm1OQghO/W5xPAUADd7Pk+byJ7lpcBaLVmyQTpJKwFcGaXJQjAkm2CdjZEAtAAKMKNVwx/CICZ05L5YWw4AGz5s+OCEIqWZhCAGsDlvVZIMLAlZggAS44RtqzMAi8bOB7G9ABUfzMZ0pITJACT0QAVX1gJQAlw/aANyneYoWy7r1PbWOz1JP73jkeg+lABfwrCcPh6AfAQ9uenVijdbIaSTb7+/ooAQgBE4hwg/zBOFC4AnYT9EYDOCIAACIAACIAACIAACEALACMAAnj4AOQIBEAABCAB0Bc2qRZTAHwSEgAD558mAJWiCiAQ1AD6LywnAJXuG0Dv5c0EoFLMAXAfQICumhP0xa0qRQwgEIYCwK+rwV+v6KtYQwCKogYgELQA8C5w1xyHwXNzCUBWTAEwOQDeBT1XdtHX18uKCYDyLhAbMf8hndZG8F7aRD/g4C8sAEwLQG0ZQgDpLuC/YNQAnks7YYAtRwSgMlw9hQ3gvwtam+vBWVUKvRWr6Ud8wkkOoERQLkP41cVKBLwLEKGlqY5DdF/cCDf+WAa3fltAP2OlJ9wH9KbEkoPJE3eQHPH//kNuw0UABEAAqgMeLrVBa0UA2hEAARCA6oCHS23QWhGAVl74FxjlJbD6plrQAAAAAElFTkSuQmCC" />
+                                                  </ui:ClickImage.Image>
+                                                  <ui:ClickImage.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="21e07a4e-7404-4774-9f66-28d1aa350d70" TimeoutMS="3000" WaitForReady="COMPLETE" />
+                                                  </ui:ClickImage.Target>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ui:ClickImage>
+                                              </TryCatch.Try>
+                                              <TryCatch.Catches>
+                                                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,179.33333333333334" sap2010:WorkflowViewState.IdRef="Catch`1_9">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ActivityAction x:TypeArguments="s:Exception">
+                                                    <ActivityAction.Argument>
+                                                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                    </ActivityAction.Argument>
+                                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'IFRAME  linkedin-sideba...'" sap:VirtualizedContainerService.HintSize="334,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True" UnblockInput="True">
+                                                      <ui:Click.CursorPosition>
+                                                        <ui:CursorPosition Position="Center">
+                                                          <ui:CursorPosition.OffsetX>
+                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                          </ui:CursorPosition.OffsetX>
+                                                          <ui:CursorPosition.OffsetY>
+                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                          </ui:CursorPosition.OffsetY>
+                                                        </ui:CursorPosition>
+                                                      </ui:Click.CursorPosition>
+                                                      <ui:Click.Target>
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="47904431-abb2-4cdd-92a0-6b9149f0571f" InformativeScreenshot="fdc837b2b952de855e15747cc0c514ce" Selector="&lt;webctrl id='linkedin-sidebar-iframe' tag='IFRAME' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
+                                                      </ui:Click.Target>
+                                                    </ui:Click>
+                                                  </ActivityAction>
+                                                </Catch>
+                                              </TryCatch.Catches>
+                                            </TryCatch>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:RetryScope.ActivityBody>
+                                      <ui:RetryScope.Condition>
+                                        <ActivityFunc x:TypeArguments="x:Boolean" />
+                                      </ui:RetryScope.Condition>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:RetryScope>
+                                  </Sequence>
+                                </ui:CommentOut.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:CommentOut>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:BrowserScope.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:BrowserScope>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:CommentOut>
+                <ui:RetryScope DisplayName="Retry Scope open apollo extension" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="RetryScope_13">
+                  <ui:RetryScope.ActivityBody>
+                    <ActivityAction>
+                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="496,504" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="fb7e126c-b7dd-40d6-aa52-f6fd306d1a43" DisplayName="CV Screen scope : click apollo extension" sap:VirtualizedContainerService.HintSize="434,416" sap2010:WorkflowViewState.IdRef="CVScope_4" SendOnPremData="False" Version="V6">
+                          <p:CVScope.Body>
+                            <ActivityAction x:TypeArguments="x:Object">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Icon (27,13,25,24)&quot;]" DesignTimeCacheId="fb7e126c-b7dd-40d6-aa52-f6fd306d1a43" DesignTimeScaleFactor="1.5" DisplayName="CV Click - Icon" sap:VirtualizedContainerService.HintSize="400,48" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_4" InformativeScreenshot="fd620d8d7efedd08ad95b1081cff02e3" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="a52d2d0d-a6ae-4575-9c82-bd57c0138ce5">
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="27, 13, 25, 24" ElementType="Icon" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACUAAAAkCAYAAAAOwvOmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAL8SURBVFhHY/h/UP3/YMOjjiIWjzqKWDz8HfVjt+r/fwfUsMqRgqnqqNZUkf+T88WwypGCqeaoR6uV/nNxMP7n5WL6/3qjMlY1xGKqOSrAluc/AwMDGMe68WFVQyymiqP29MnAHQTDR6fKgeW2dyHk+HmY/n/YqoKhHx1T7ChQ4laSYkVxEAiry7H9/7MPkujdzbjAYu1pIhj6sWGKHdWYJIzhIBjuzRYFq7m6UOG/lAjL/++7VDH0Y8MUOer+CqX/HGyMcEcYqLD/V5ZGhBoPJ+P/Z+sgif76IgUM/bgwRY7ysuCGOwCET86Q+7+7FzV9RTjzYtWLD5PtqE1t0iiWR7kgLPe1QnUsLNETi8lyFChxy4qxwC0FlU+waALhh6uU/rMjRSso0f/aS3xJT5aj6hNQE3dHOiRXnZsj///uckUwuyYOuxpiMMmOAlmKHAqg4uDnHkgoWGhx/Pez5gGzvwFzmowoIjQ52Rn/PwaW+shm4cIkO8rZGFLmwDAoYYPE55SJw8V29UDEVjVIoagNtoc4mBAmyVEbWlEt8QEmaJD4uy0q/wV5meDiWgpscD0OhpwoenZCHYwPE+2orztV/8uJI6KDhZkBnn4y/PlRLK6IFoLrA5VPTEwIOVA5RijRE+2oqhghrBaDSmtGRoS4oiQrOHci6y0IFUTR25yMP9ET5ajbSxX/s7EiEjeoygCFHEjOxQQ1je3rl8XQ/2m76n8xQWa4GlAt8GAl7kRPlKPQLV5eJwkWn1aISNwgHImn9J5fIYGiFpZLsWGCjlrbjJq4QekK1FQpixRCqfdAIQkqNLGZAcPmwCID2aytndJY1eF1FCiKpJHKGny4NEIQqxnI+MwseRQ9ChKY6Q+E8ToKlJiRDcGFQSEAK0AJ4VQf1JxaCyz50dXgdNSNxYrgbI9sADoG+bQ/RxTemCMGvwK230FNGpgZoGiHFS0wjNNRoLbS/gmyWPHBSbJEVxnY8DVg2YVsHnpOJJjQBwKPOopYPOooYvEgdJT6fwCVMIaojRO5JQAAAABJRU5ErkJggg==" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="16ac2e39-07e3-4731-b057-742b36566836">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </p:CvClickWithDescriptor>
+                              </Sequence>
+                            </ActivityAction>
+                          </p:CVScope.Body>
+                          <p:CVScope.DesignTimeCache>
+                            <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+                          </p:CVScope.DesignTimeCache>
+                          <p:CVScope.DesignTimeCacheContainer>
+                            <uc:CvCacheContainer>
+                              <uc:CvCacheContainer.Caches>
+                                <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                                  <uc:CVCache OcrTexts="{x:Null}" DataSent="False" DisplayName="Screen CV Click - Icon (Main)" Id="fb7e126c-b7dd-40d6-aa52-f6fd306d1a43" InformativeScreenshot="fa02fd0edfd7a94ab5445dc28e89b53a" LogicalPosition="1805, 348" Position="1805, 348" ScaleFactor="1.5" ScreenshotGuid="3051d0c7-2706-4a88-8adf-3207e07349c8" ServerVersion="24.1.2.2">
+                                    <uc:CVCache.CvAnchorRelations>
+                                      <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
+                                    </uc:CVCache.CvAnchorRelations>
+                                    <uc:CVCache.CvUiElements>
+                                      <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="8">
+                                        <uc:CvElementInfo Category="Icon" Region="27, 13, 25, 24" />
+                                        <uc:CvElementInfo Category="Button" Region="18, 0, 42, 46" />
+                                        <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="20, 5, 37, 39" />
+                                        <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="18, 0, 40, 38" />
+                                        <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="14, 0, 45, 6" />
+                                      </scg:List>
+                                    </uc:CVCache.CvUiElements>
+                                  </uc:CVCache>
+                                </scg:List>
+                              </uc:CvCacheContainer.Caches>
+                            </uc:CvCacheContainer>
+                          </p:CVScope.DesignTimeCacheContainer>
+                          <p:CVScope.OCREngine>
+                            <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
+                              <ActivityFunc.Argument>
+                                <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+                              </ActivityFunc.Argument>
+                            </ActivityFunc>
+                          </p:CVScope.OCREngine>
+                          <p:CVScope.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cf841782-9bb1-45bc-ae18-36b6d6555830" InformativeScreenshot="4c44c9e05c43e5b24853ec5dcc75bd85" Selector="&lt;html app='chrome.exe' title='*| LinkedIn' /&gt;&lt;webctrl id='linkedin-sidebar-iframe' tag='IFRAME' /&gt;" WaitForReady="INTERACTIVE">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                            </ui:Target>
+                          </p:CVScope.Target>
+                          <p:CVScope.UseLocalServer>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </p:CVScope.UseLocalServer>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </p:CVScope>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:RetryScope.ActivityBody>
+                  <ui:RetryScope.Condition>
+                    <ActivityFunc x:TypeArguments="x:Boolean" />
+                  </ui:RetryScope.Condition>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:RetryScope>
+              </Sequence>
+            </Parallel>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1198,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_14">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,164.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_66">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:RetryScope DisplayName="Retry Scope -- Click - apollo icon" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="RetryScope_8" NumberOfRetries="5">
+                  <ui:RetryScope DisplayName="Retry Scope -- Click - apollo icon" sap:VirtualizedContainerService.HintSize="354,76.66666666666667" sap2010:WorkflowViewState.IdRef="RetryScope_8" NumberOfRetries="5">
                     <ui:RetryScope.ActivityBody>
                       <ActivityAction>
                         <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="Sequence_59">
@@ -550,82 +938,463 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser linkedin" sap:VirtualizedContainerService.HintSize="634,1050" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="e66785f685ebc67dcb964ef1d8f92c11" Selector="&lt;html app='chrome.exe' title='*LinkedIn' /&gt;">
+            <Sequence DisplayName="opening profile apollo" sap:VirtualizedContainerService.HintSize="1198,1192.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_102">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="626,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_18">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Boolean">[no_page]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[no_page]" DisplayName="While -- till apollo profile page opens" sap:VirtualizedContainerService.HintSize="626,955.3333333333334" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                <ui:InterruptibleWhile.Body>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,816.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:UiElementExists DisplayName="Element Exists people page apollo" Exists="[apollo_page]" sap:VirtualizedContainerService.HintSize="530,119.33333333333333" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f196b10b-8b8b-475a-a8ee-1f00bcd1521c" Selector="[string.Format(&quot;&lt;wnd app='chrome.exe' cls='Chrome*' title='Apollo' /&gt;&lt;ctrl role='grouping' text='*{0}*' /&gt;&quot;, first_name)]" TimeoutMS="25000" WaitForReady="COMPLETE" />
+                      </ui:UiElementExists.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:UiElementExists>
+                    <If Condition="[apollo_page]" DisplayName="If -- apollo profile page found" sap:VirtualizedContainerService.HintSize="530,609.3333333333334" sap2010:WorkflowViewState.IdRef="If_14">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,253.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_94">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_19">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[no_page]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:Break sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="Break_1" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,193.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_95">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:RetryScope DisplayName="Retry Scope -- Click close apollo" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="RetryScope_17">
+                            <ui:RetryScope.ActivityBody>
+                              <ActivityAction>
+                                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="Sequence_96">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click close apollo" sap:VirtualizedContainerService.HintSize="354,110" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                    <ui:Click.CursorPosition>
+                                      <ui:CursorPosition Position="Center">
+                                        <ui:CursorPosition.OffsetX>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetX>
+                                        <ui:CursorPosition.OffsetY>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetY>
+                                      </ui:CursorPosition>
+                                    </ui:Click.CursorPosition>
+                                    <ui:Click.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e13ff556-73fb-4804-b0e5-0925f899ce26" Selector="&lt;wnd app='chrome.exe' cls='Chrome*' title='Apollo' /&gt;&lt;ctrl name='Apollo*' role='pane' /&gt;&lt;ctrl name='Close' role='push button' text='Close' /&gt;" TimeoutMS="5000" WaitForReady="NONE" />
+                                    </ui:Click.Target>
+                                  </ui:Click>
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:RetryScope.ActivityBody>
+                            <ui:RetryScope.Condition>
+                              <ActivityFunc x:TypeArguments="x:Boolean" />
+                            </ui:RetryScope.Condition>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:RetryScope>
+                          <ui:RetryScope DisplayName="Retry Scope opening apollo window" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="RetryScope_18">
+                            <ui:RetryScope.ActivityBody>
+                              <ActivityAction>
+                                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,275.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_97">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click apollo extension" sap:VirtualizedContainerService.HintSize="354,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                    <ui:Click.CursorPosition>
+                                      <ui:CursorPosition Position="Center">
+                                        <ui:CursorPosition.OffsetX>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetX>
+                                        <ui:CursorPosition.OffsetY>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetY>
+                                      </ui:CursorPosition>
+                                    </ui:Click.CursorPosition>
+                                    <ui:Click.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="77bbeaf7-d0aa-400d-a607-53c9c7a5647d" InformativeScreenshot="4729f5b4641cdf4739166c998761d526" Selector="&lt;wnd app='chrome.exe' cls='Chrome*' title='*LinkedIn*' /&gt;&lt;ctrl name='*LinkedIn*' role='pane' /&gt;&lt;ctrl name='Apollo Has access to this site' role='menu button' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:Click.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:Click>
+                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'text  Launch Window Mode'" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                    <ui:Click.CursorPosition>
+                                      <ui:CursorPosition Position="Center">
+                                        <ui:CursorPosition.OffsetX>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetX>
+                                        <ui:CursorPosition.OffsetY>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetY>
+                                      </ui:CursorPosition>
+                                    </ui:Click.CursorPosition>
+                                    <ui:Click.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4aab1a00-696d-48e5-b53e-65c84fcfbdfa" InformativeScreenshot="9de7783e07875daa2a51e42201aa273f" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;&lt;ctrl name='Apollo' role='document' /&gt;&lt;ctrl name='Launch Window Mode' role='text' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:Click.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:Click>
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:RetryScope.ActivityBody>
+                            <ui:RetryScope.Condition>
+                              <ActivityFunc x:TypeArguments="x:Boolean">
+                                <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'pane'" sap:VirtualizedContainerService.HintSize="334,107.33333333333333" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
+                                  <ui:UiElementExists.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e8ea1cec-fed5-4c77-b792-ea71a145226d" InformativeScreenshot="e40ee8f0d845cce1b00933b84e2cfe6d" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Apollo' /&gt;&lt;ctrl name='Apollo*' role='pane' /&gt;&lt;ctrl role='pane' text='Apollo' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:UiElementExists.Target>
+                                </ui:UiElementExists>
+                              </ActivityFunc>
+                            </ui:RetryScope.Condition>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:RetryScope>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ui:InterruptibleWhile.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:InterruptibleWhile>
+            </Sequence>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1198,402.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_25">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,250.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_103">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser   Apollo' maximaize" sap:VirtualizedContainerService.HintSize="354,86" sap2010:WorkflowViewState.IdRef="BrowserScope_8" InformativeScreenshot="0dbf49b618b08caf4ff6cd739da03cdb" Selector="&lt;html app='chrome.exe' title='Apollo' /&gt;">
+                    <ui:BrowserScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_99">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="MaximizeWindow_8" />
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:BrowserScope.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:BrowserScope>
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser linkedin maximize" sap:VirtualizedContainerService.HintSize="354,76.66666666666667" sap2010:WorkflowViewState.IdRef="BrowserScope_6" InformativeScreenshot="bdefbd8a67cce2599896fa42d7fd9509" Selector="&lt;html app='chrome.exe' title='*LinkedIn*' /&gt;">
+                    <ui:BrowserScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="MaximizeWindow_6" />
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:BrowserScope.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:BrowserScope>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser   Apollo'" sap:VirtualizedContainerService.HintSize="1198,86" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="0dbf49b618b08caf4ff6cd739da03cdb" Selector="&lt;html app='chrome.exe' title='Apollo' /&gt;">
               <ui:BrowserScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="600,870.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,193.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_52">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" sap:VirtualizedContainerService.HintSize="538,119.33333333333333" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition Position="Center">
-                          <ui:CursorPosition.OffsetX>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetX>
-                          <ui:CursorPosition.OffsetY>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetY>
-                        </ui:CursorPosition>
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="84afe6ee-c17f-4b0a-a7bb-74c8eae99f0d" Selector="&lt;ctrl name='*LinkedIn*' role='pane' /&gt;&lt;ctrl name='Address and search bar' role='editable text' /&gt;" TimeoutMS="2000" WaitForReady="COMPLETE" />
-                      </ui:Click.Target>
-                    </ui:Click>
-                    <ui:RetryScope DisplayName="Retry Scope - apollo icon" sap:VirtualizedContainerService.HintSize="538,663.3333333333334" sap2010:WorkflowViewState.IdRef="RetryScope_10">
+                    <ui:RetryScope DisplayName="Retry Scope -- save contact apollo" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="RetryScope_14">
                       <ui:RetryScope.ActivityBody>
                         <ActivityAction>
-                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="496,462" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="Sequence_86">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,374" sap2010:WorkflowViewState.IdRef="TryCatch_9">
-                              <TryCatch.Try>
-                                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe (5)'" sap:VirtualizedContainerService.HintSize="204,54" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
-                                  <ui:ClickImage.CursorPosition>
-                                    <ui:CursorPosition Position="Center">
-                                      <ui:CursorPosition.OffsetX>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:CursorPosition.OffsetX>
-                                      <ui:CursorPosition.OffsetY>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:CursorPosition.OffsetY>
-                                    </ui:CursorPosition>
-                                  </ui:ClickImage.CursorPosition>
-                                  <ui:ClickImage.Image>
-                                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.5" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAABUCAYAAAB9czKDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAbNSURBVHhe7d1ZbFRVGMBx2mlnuhKW7nQcZ8oMiwkPRiJEHlgkigkxxohigqghJoQHsLG+YAJBCYssYoS4RQSCKBG1LWurAhE0Yhplayjd9850Ou2UQmmBfJ7vzJw7d+7c297OQhW+h38mDj59v3vPuWeazIzp6/VAON3wdumut8cdkre7M6Qej0uqu8vpzwUet1Oqq7OD53ax2Gunq13K5WrjOZ2tvjpaeB3tzdDe1sRra2301eKrtbmB19JUD82NdbymhlpeY30Nr6GuWqq+lsVe62qv82prqqRqqq+x8LUKvF4v7+zZs0NGAARAAKoDHi61QWtFANoRwIMIoDVs5YA97g5eb2M59F3dCv1/vQ63zy+EO6enw+AvDn9TYODnQLf99Zez2Ost9iq6Webg9fm7ccpX70kHeE/46hEdn8LrPubgeY46oMufu9RXZ4kvV3EgZ7EdnCV26GCvWPtPgdp+xBy8UQNQDh+TD14+fBz8rX8K4e6Z6XD39BS486tDigCGSe/w5Vd+YFlxQt+1T2Dg/Dw+eBEBjCA9APKlRwwer/yblR9KVz0BqAxXT3qHjwUNv2o33FMZPgGMML3DV675g2zZuacyfAIYYXoAxNqPw8f6Lxby4RNAoIgBhhu+uPq9DWVs6XmMABRFFUAMXwCItb+rs50/54vhE0CgiADkw5cDKK9+BLjNDlkEEFrMAMTVjwBuVxsM/r6QAFQKG2Co4Suv/k5na9D6TwCBYgIgv/olADZgAggtqgBqVz8uP64OAtAqKgBDLT8EoD54UVgAWo+fBPAfAJAP37f+t4GzvYUANIopAF79BKA+eFHUALSWHwJQH7woYgD51a8FgH+TJQD1Yg6AGzABaEcADxIADl8OgMsPAagPXkQABBA7APdROx8+AYwSwLo3MmDbqqyHDwCHP9oA1w7aICXZAGmpBqg/XPDwAMifgEYTYPFTaTAmLo73yoKxBHA/AY5uMUvDF5XtMHOAz4pyIWt8ImSPN/KuH5xMANEE8Bx3gDXPGAJgN5v4v+HVv+CJVIiLi4e1yzLpDog2wHvLM0KGL9r4VhYHKN9phkmZRjZsWoKiClB5wAZJpnhp4DMKkoLuhtQUA9+cEWH7qhzaA6IN8MyTgY0XO/OxBUo2B+8HL85Np004FgDfvz8paNBL5o+VTsKLZgXDnNpuJoBoAnSzzTU/K1EaMD7/1xyySQCV+61gMsZL/44bMg6WABSFC7D2tYnScLENKzL5WeDcHgtc/trKT8JFrwb/P+vfZBsyAUQOcHW/Lejqxk3Xc8zOAWZOS4HnZqdxABxWXmbgLklOMrA7o4AAIgWY93iqNFQMD2E4/N2FOdJ7xZvy+SFs39o86T08Bzw/ZywBRAJweEPwxrtodjo/C7QcKYBx6QnS+1MtJumjiDkzUvh7CID98EE+AYQD0FVqB3N24Bk/ISEeruyzcYAVi8dJ72OFL0+QAC58/ijEGwIAtlwTG6ydAEYK8O7S4E31naUT+PArvrRCXHzgfUuuEToZlgDoYa18YbwEgOFHEgTA0gtwdZ8VjImBjTc3I5ENzM4BlHvCsa3mkL8HtByZzD+QEwBJJgNc3GsjAL0A83HIYwJDxs0VH0c/Wp0dNPyX5vkOY2p/kNnzdo4EgC2alU4AegC+XceeZHD4fgDcB/Aqx3Ve/jmQkT2aVh6wagLgGWDm1OQghO/W5xPAUADd7Pk+byJ7lpcBaLVmyQTpJKwFcGaXJQjAkm2CdjZEAtAAKMKNVwx/CICZ05L5YWw4AGz5s+OCEIqWZhCAGsDlvVZIMLAlZggAS44RtqzMAi8bOB7G9ABUfzMZ0pITJACT0QAVX1gJQAlw/aANyneYoWy7r1PbWOz1JP73jkeg+lABfwrCcPh6AfAQ9uenVijdbIaSTb7+/ooAQgBE4hwg/zBOFC4AnYT9EYDOCIAACIAACIAACIAACEALACMAAnj4AOQIBEAABCAB0Bc2qRZTAHwSEgAD558mAJWiCiAQ1AD6LywnAJXuG0Dv5c0EoFLMAXAfQICumhP0xa0qRQwgEIYCwK+rwV+v6KtYQwCKogYgELQA8C5w1xyHwXNzCUBWTAEwOQDeBT1XdtHX18uKCYDyLhAbMf8hndZG8F7aRD/g4C8sAEwLQG0ZQgDpLuC/YNQAnks7YYAtRwSgMlw9hQ3gvwtam+vBWVUKvRWr6Ud8wkkOoERQLkP41cVKBLwLEKGlqY5DdF/cCDf+WAa3fltAP2OlJ9wH9KbEkoPJE3eQHPH//kNuw0UABEAAqgMeLrVBa0UA2hEAARCA6oCHS23QWhGAVl74FxjlJbD6plrQAAAAAElFTkSuQmCC" />
-                                  </ui:ClickImage.Image>
-                                  <ui:ClickImage.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="21e07a4e-7404-4774-9f66-28d1aa350d70" TimeoutMS="3000" WaitForReady="COMPLETE" />
-                                  </ui:ClickImage.Target>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:ClickImage>
-                              </TryCatch.Try>
-                              <TryCatch.Catches>
-                                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,179.33333333333334" sap2010:WorkflowViewState.IdRef="Catch`1_9">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <ActivityAction x:TypeArguments="s:Exception">
-                                    <ActivityAction.Argument>
-                                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                    </ActivityAction.Argument>
-                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'IFRAME  linkedin-sideba...'" sap:VirtualizedContainerService.HintSize="334,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True" UnblockInput="True">
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click save to apollo" sap:VirtualizedContainerService.HintSize="354,130" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True" UnblockInput="True">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8f811591-b758-40e0-85d2-86e27e3643d4" InformativeScreenshot="409315fb317f560bf9b6ec01f571d7b7" Selector="&lt;wnd app='chrome.exe' cls='Chrome*' title='Apollo' /&gt;&lt;ctrl name='Add Contact - Apollo' role='document' /&gt;&lt;ctrl name='Save to Apollo' role='push button' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
+                              </ui:Click.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:Click>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:RetryScope.ActivityBody>
+                      <ui:RetryScope.Condition>
+                        <ActivityFunc x:TypeArguments="x:Boolean">
+                          <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists contact overview" sap:VirtualizedContainerService.HintSize="334,87.33333333333333" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+                            <ui:UiElementExists.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="42a9d6c7-c012-4423-aab8-8643934ba2e4" Selector="&lt;ctrl name='*Apollo' role='document' /&gt;&lt;ctrl name='Contact overview' role='page tab' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:UiElementExists.Target>
+                          </ui:UiElementExists>
+                        </ActivityFunc>
+                      </ui:RetryScope.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:RetryScope>
+                    <ui:RetryScope DisplayName="Retry Scope -- email apolo" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="RetryScope_12">
+                      <ui:RetryScope.ActivityBody>
+                        <ActivityAction>
+                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text email id" sap:VirtualizedContainerService.HintSize="354,110" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                              <ui:GetValue.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d87b5dde-23fc-4746-8a0f-887d58f48a11" Selector="&lt;ctrl role='grouping' text='Contact information' /&gt;&lt;nav up='2' /&gt;&lt;ctrl name='*' role='link' aastate='linked, opaque' idx='*' /&gt;" WaitForReady="COMPLETE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:GetValue.Target>
+                              <ui:GetValue.Value>
+                                <OutArgument x:TypeArguments="x:String">[email_id]</OutArgument>
+                              </ui:GetValue.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:GetValue>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:RetryScope.ActivityBody>
+                      <ui:RetryScope.Condition>
+                        <ActivityFunc x:TypeArguments="x:Boolean" />
+                      </ui:RetryScope.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:RetryScope>
+                  </Sequence>
+                </ActivityAction>
+              </ui:BrowserScope.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:BrowserScope>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1198,86" sap2010:WorkflowViewState.IdRef="CommentOut_23">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,136" sap2010:WorkflowViewState.IdRef="Sequence_100">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="getting email id from apollo" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:UiElementExists DisplayName="Element Exists people page apollo" Exists="[apollo_page]" sap:VirtualizedContainerService.HintSize="546,119.33333333333333" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f196b10b-8b8b-475a-a8ee-1f00bcd1521c" Selector="[string.Format(&quot;&lt;wnd app='chrome.exe' cls='Chrome*' title='Apollo' /&gt;&lt;ctrl role='grouping' text='{0}*' /&gt;&quot;, first_name)]" TimeoutMS="10000" WaitForReady="COMPLETE" />
+                      </ui:UiElementExists.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:UiElementExists>
+                    <If Condition="[apollo_page]" DisplayName="If apollo_page available" sap:VirtualizedContainerService.HintSize="546,686" sap2010:WorkflowViewState.IdRef="If_11">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="512,418.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence sap:VirtualizedContainerService.HintSize="450,330.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:RetryScope DisplayName="Retry Scope -- Click close apollo" sap:VirtualizedContainerService.HintSize="388,57.333333333333336" sap2010:WorkflowViewState.IdRef="RetryScope_4">
+                              <ui:RetryScope.ActivityBody>
+                                <ActivityAction>
+                                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click close apollo" sap:VirtualizedContainerService.HintSize="354,110" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
                                       <ui:Click.CursorPosition>
                                         <ui:CursorPosition Position="Center">
                                           <ui:CursorPosition.OffsetX>
@@ -637,81 +1406,95 @@
                                         </ui:CursorPosition>
                                       </ui:Click.CursorPosition>
                                       <ui:Click.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="47904431-abb2-4cdd-92a0-6b9149f0571f" InformativeScreenshot="fdc837b2b952de855e15747cc0c514ce" Selector="&lt;webctrl id='linkedin-sidebar-iframe' tag='IFRAME' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e13ff556-73fb-4804-b0e5-0925f899ce26" Selector="&lt;wnd app='chrome.exe' cls='Chrome*' title='Apollo' /&gt;&lt;ctrl name='Apollo*' role='pane' /&gt;&lt;ctrl name='Close' role='push button' text='Close' /&gt;" TimeoutMS="5000" WaitForReady="NONE" />
                                       </ui:Click.Target>
                                     </ui:Click>
-                                  </ActivityAction>
-                                </Catch>
-                              </TryCatch.Catches>
-                            </TryCatch>
-                          </Sequence>
-                        </ActivityAction>
-                      </ui:RetryScope.ActivityBody>
-                      <ui:RetryScope.Condition>
-                        <ActivityFunc x:TypeArguments="x:Boolean" />
-                      </ui:RetryScope.Condition>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:RetryScope>
-                  </Sequence>
-                </ActivityAction>
-              </ui:BrowserScope.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:BrowserScope>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="634,86" sap2010:WorkflowViewState.IdRef="CommentOut_15">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="520,534" sap2010:WorkflowViewState.IdRef="Sequence_68">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:RetryScope DisplayName="Retry Scope open apollo extension" sap:VirtualizedContainerService.HintSize="458,446" sap2010:WorkflowViewState.IdRef="RetryScope_9">
-                    <ui:RetryScope.ActivityBody>
-                      <ActivityAction>
-                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,164.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="fb7e126c-b7dd-40d6-aa52-f6fd306d1a43" DisplayName="CV Screen scope : click apollo extension" sap:VirtualizedContainerService.HintSize="354,76.66666666666667" sap2010:WorkflowViewState.IdRef="CVScope_4" SendOnPremData="False" Version="V6">
-                            <p:CVScope.Body>
-                              <ActivityAction x:TypeArguments="x:Object">
-                                <ActivityAction.Argument>
-                                  <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
-                                </ActivityAction.Argument>
-                                <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Icon (27,13,25,24)&quot;]" DesignTimeCacheId="fb7e126c-b7dd-40d6-aa52-f6fd306d1a43" DesignTimeScaleFactor="1.5" DisplayName="CV Click - Icon" sap:VirtualizedContainerService.HintSize="400,48" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_4" InformativeScreenshot="fd620d8d7efedd08ad95b1081cff02e3" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
-                                    <p:CvClickWithDescriptor.CursorPosition>
-                                      <ui:CursorPosition Position="Center">
-                                        <ui:CursorPosition.OffsetX>
-                                          <InArgument x:TypeArguments="x:Int32" />
-                                        </ui:CursorPosition.OffsetX>
-                                        <ui:CursorPosition.OffsetY>
-                                          <InArgument x:TypeArguments="x:Int32" />
-                                        </ui:CursorPosition.OffsetY>
-                                      </ui:CursorPosition>
-                                    </p:CvClickWithDescriptor.CursorPosition>
-                                    <p:CvClickWithDescriptor.DesignTimeDescriptor>
-                                      <uc:CvDescriptor Id="a52d2d0d-a6ae-4575-9c82-bd57c0138ce5">
-                                        <uc:CvDescriptor.Target>
-                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="27, 13, 25, 24" ElementType="Icon" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACUAAAAkCAYAAAAOwvOmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAL8SURBVFhHY/h/UP3/YMOjjiIWjzqKWDz8HfVjt+r/fwfUsMqRgqnqqNZUkf+T88WwypGCqeaoR6uV/nNxMP7n5WL6/3qjMlY1xGKqOSrAluc/AwMDGMe68WFVQyymiqP29MnAHQTDR6fKgeW2dyHk+HmY/n/YqoKhHx1T7ChQ4laSYkVxEAiry7H9/7MPkujdzbjAYu1pIhj6sWGKHdWYJIzhIBjuzRYFq7m6UOG/lAjL/++7VDH0Y8MUOer+CqX/HGyMcEcYqLD/V5ZGhBoPJ+P/Z+sgif76IgUM/bgwRY7ysuCGOwCET86Q+7+7FzV9RTjzYtWLD5PtqE1t0iiWR7kgLPe1QnUsLNETi8lyFChxy4qxwC0FlU+waALhh6uU/rMjRSso0f/aS3xJT5aj6hNQE3dHOiRXnZsj///uckUwuyYOuxpiMMmOAlmKHAqg4uDnHkgoWGhx/Pez5gGzvwFzmowoIjQ52Rn/PwaW+shm4cIkO8rZGFLmwDAoYYPE55SJw8V29UDEVjVIoagNtoc4mBAmyVEbWlEt8QEmaJD4uy0q/wV5meDiWgpscD0OhpwoenZCHYwPE+2orztV/8uJI6KDhZkBnn4y/PlRLK6IFoLrA5VPTEwIOVA5RijRE+2oqhghrBaDSmtGRoS4oiQrOHci6y0IFUTR25yMP9ET5ajbSxX/s7EiEjeoygCFHEjOxQQ1je3rl8XQ/2m76n8xQWa4GlAt8GAl7kRPlKPQLV5eJwkWn1aISNwgHImn9J5fIYGiFpZLsWGCjlrbjJq4QekK1FQpixRCqfdAIQkqNLGZAcPmwCID2aytndJY1eF1FCiKpJHKGny4NEIQqxnI+MwseRQ9ChKY6Q+E8ToKlJiRDcGFQSEAK0AJ4VQf1JxaCyz50dXgdNSNxYrgbI9sADoG+bQ/RxTemCMGvwK230FNGpgZoGiHFS0wjNNRoLbS/gmyWPHBSbJEVxnY8DVg2YVsHnpOJJjQBwKPOopYPOooYvEgdJT6fwCVMIaojRO5JQAAAABJRU5ErkJggg==" />
-                                        </uc:CvDescriptor.Target>
-                                      </uc:CvDescriptor>
-                                    </p:CvClickWithDescriptor.DesignTimeDescriptor>
-                                    <p:CvClickWithDescriptor.Target>
-                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="16ac2e39-07e3-4731-b057-742b36566836">
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:RetryScope.ActivityBody>
+                              <ui:RetryScope.Condition>
+                                <ActivityFunc x:TypeArguments="x:Boolean" />
+                              </ui:RetryScope.Condition>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:RetryScope>
+                            <ui:RetryScope DisplayName="Retry Scope opening apollo window" sap:VirtualizedContainerService.HintSize="388,57.333333333333336" sap2010:WorkflowViewState.IdRef="RetryScope_5">
+                              <ui:RetryScope.ActivityBody>
+                                <ActivityAction>
+                                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,275.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click apollo extension" sap:VirtualizedContainerService.HintSize="354,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition Position="Center">
+                                          <ui:CursorPosition.OffsetX>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetX>
+                                          <ui:CursorPosition.OffsetY>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetY>
+                                        </ui:CursorPosition>
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="77bbeaf7-d0aa-400d-a607-53c9c7a5647d" InformativeScreenshot="4729f5b4641cdf4739166c998761d526" Selector="&lt;wnd app='chrome.exe' cls='Chrome*' title='*LinkedIn*' /&gt;&lt;ctrl name='*LinkedIn*' role='pane' /&gt;&lt;ctrl name='Apollo Has access to this site' role='menu button' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:Click>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'text  Launch Window Mode'" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition Position="Center">
+                                          <ui:CursorPosition.OffsetX>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetX>
+                                          <ui:CursorPosition.OffsetY>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetY>
+                                        </ui:CursorPosition>
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4aab1a00-696d-48e5-b53e-65c84fcfbdfa" InformativeScreenshot="9de7783e07875daa2a51e42201aa273f" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;&lt;ctrl name='Apollo' role='document' /&gt;&lt;ctrl name='Launch Window Mode' role='text' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:Click>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:RetryScope.ActivityBody>
+                              <ui:RetryScope.Condition>
+                                <ActivityFunc x:TypeArguments="x:Boolean">
+                                  <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'pane'" sap:VirtualizedContainerService.HintSize="334,107.33333333333333" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                                    <ui:UiElementExists.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e8ea1cec-fed5-4c77-b792-ea71a145226d" InformativeScreenshot="e40ee8f0d845cce1b00933b84e2cfe6d" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Apollo' /&gt;&lt;ctrl name='Apollo*' role='pane' /&gt;&lt;ctrl role='pane' text='Apollo' /&gt;">
                                         <ui:Target.TimeoutMS>
                                           <InArgument x:TypeArguments="x:Int32" />
                                         </ui:Target.TimeoutMS>
@@ -719,79 +1502,142 @@
                                           <InArgument x:TypeArguments="ui:WaitForReady" />
                                         </ui:Target.WaitForReady>
                                       </ui:Target>
-                                    </p:CvClickWithDescriptor.Target>
+                                    </ui:UiElementExists.Target>
+                                  </ui:UiElementExists>
+                                </ActivityFunc>
+                              </ui:RetryScope.Condition>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:RetryScope>
+                            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser linkedin" sap:VirtualizedContainerService.HintSize="388,57.333333333333336" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="bdefbd8a67cce2599896fa42d7fd9509" Selector="&lt;html app='chrome.exe' title='*LinkedIn*' /&gt;">
+                              <ui:BrowserScope.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_85">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                  </p:CvClickWithDescriptor>
-                                </Sequence>
-                              </ActivityAction>
-                            </p:CVScope.Body>
-                            <p:CVScope.DesignTimeCache>
-                              <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
-                            </p:CVScope.DesignTimeCache>
-                            <p:CVScope.DesignTimeCacheContainer>
-                              <uc:CvCacheContainer>
-                                <uc:CvCacheContainer.Caches>
-                                  <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
-                                    <uc:CVCache OcrTexts="{x:Null}" DataSent="False" DisplayName="Screen CV Click - Icon (Main)" Id="fb7e126c-b7dd-40d6-aa52-f6fd306d1a43" InformativeScreenshot="fa02fd0edfd7a94ab5445dc28e89b53a" LogicalPosition="1805, 348" Position="1805, 348" ScaleFactor="1.5" ScreenshotGuid="3051d0c7-2706-4a88-8adf-3207e07349c8" ServerVersion="24.1.2.2">
-                                      <uc:CVCache.CvAnchorRelations>
-                                        <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
-                                      </uc:CVCache.CvAnchorRelations>
-                                      <uc:CVCache.CvUiElements>
-                                        <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="8">
-                                          <uc:CvElementInfo Category="Icon" Region="27, 13, 25, 24" />
-                                          <uc:CvElementInfo Category="Button" Region="18, 0, 42, 46" />
-                                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="20, 5, 37, 39" />
-                                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="18, 0, 40, 38" />
-                                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="14, 0, 45, 6" />
-                                        </scg:List>
-                                      </uc:CVCache.CvUiElements>
-                                    </uc:CVCache>
-                                  </scg:List>
-                                </uc:CvCacheContainer.Caches>
-                              </uc:CvCacheContainer>
-                            </p:CVScope.DesignTimeCacheContainer>
-                            <p:CVScope.OCREngine>
-                              <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
-                                <ActivityFunc.Argument>
-                                  <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
-                                </ActivityFunc.Argument>
-                              </ActivityFunc>
-                            </p:CVScope.OCREngine>
-                            <p:CVScope.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cf841782-9bb1-45bc-ae18-36b6d6555830" InformativeScreenshot="4c44c9e05c43e5b24853ec5dcc75bd85" Selector="&lt;html app='chrome.exe' title='*| LinkedIn' /&gt;&lt;webctrl id='linkedin-sidebar-iframe' tag='IFRAME' /&gt;" WaitForReady="INTERACTIVE">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                              </ui:Target>
-                            </p:CVScope.Target>
-                            <p:CVScope.UseLocalServer>
-                              <InArgument x:TypeArguments="x:Boolean" />
-                            </p:CVScope.UseLocalServer>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </p:CVScope>
+                                    <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="MaximizeWindow_5" />
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:BrowserScope.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:BrowserScope>
+                            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser   Apollo'" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="0dbf49b618b08caf4ff6cd739da03cdb" Selector="&lt;html app='chrome.exe' title='Apollo' /&gt;">
+                              <ui:BrowserScope.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,250.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="MaximizeWindow_4" />
+                                    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="RetryScope_16">
+                                      <ui:RetryScope.ActivityBody>
+                                        <ActivityAction>
+                                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="Sequence_88">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click save to apollo" sap:VirtualizedContainerService.HintSize="354,130" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True" UnblockInput="True">
+                                              <ui:Click.CursorPosition>
+                                                <ui:CursorPosition Position="Center">
+                                                  <ui:CursorPosition.OffsetX>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:CursorPosition.OffsetX>
+                                                  <ui:CursorPosition.OffsetY>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:CursorPosition.OffsetY>
+                                                </ui:CursorPosition>
+                                              </ui:Click.CursorPosition>
+                                              <ui:Click.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8f811591-b758-40e0-85d2-86e27e3643d4" InformativeScreenshot="409315fb317f560bf9b6ec01f571d7b7" Selector="&lt;wnd app='chrome.exe' cls='Chrome*' title='Apollo' /&gt;&lt;ctrl name='Add Contact - Apollo' role='document' /&gt;&lt;ctrl name='Save to Apollo' role='push button' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
+                                              </ui:Click.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:Click>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:RetryScope.ActivityBody>
+                                      <ui:RetryScope.Condition>
+                                        <ActivityFunc x:TypeArguments="x:Boolean">
+                                          <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists contact overview" sap:VirtualizedContainerService.HintSize="334,87.33333333333333" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
+                                            <ui:UiElementExists.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="42a9d6c7-c012-4423-aab8-8643934ba2e4" Selector="&lt;ctrl name='*Apollo' role='document' /&gt;&lt;ctrl name='Contact overview' role='page tab' /&gt;">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </ui:UiElementExists.Target>
+                                          </ui:UiElementExists>
+                                        </ActivityFunc>
+                                      </ui:RetryScope.Condition>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:RetryScope>
+                                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text email id" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="GetValue_4">
+                                      <ui:GetValue.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d87b5dde-23fc-4746-8a0f-887d58f48a11" Selector="&lt;ctrl role='grouping' text='Contact information' /&gt;&lt;nav up='2' /&gt;&lt;ctrl name='*' role='link' aastate='linked, opaque' idx='1' /&gt;" WaitForReady="COMPLETE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </ui:GetValue.Target>
+                                      <ui:GetValue.Value>
+                                        <OutArgument x:TypeArguments="x:String">[email_id]</OutArgument>
+                                      </ui:GetValue.Value>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:GetValue>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:BrowserScope.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:BrowserScope>
+                          </Sequence>
                         </Sequence>
-                      </ActivityAction>
-                    </ui:RetryScope.ActivityBody>
-                    <ui:RetryScope.Condition>
-                      <ActivityFunc x:TypeArguments="x:Boolean" />
-                    </ui:RetryScope.Condition>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:RetryScope>
+                      </If.Else>
+                    </If>
+                  </Sequence>
                 </Sequence>
               </ui:CommentOut.Body>
               <sap:WorkflowViewStateService.ViewState>
@@ -801,390 +1647,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <Delay DisplayName="Delay for apollo to load" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="634,124" sap2010:WorkflowViewState.IdRef="Delay_2">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </Delay>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="634,350" sap2010:WorkflowViewState.IdRef="CommentOut_17">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="Sequence_72">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:UiElementExists DisplayName="Element Exists people page apollo" Exists="[apollo_page]" sap:VirtualizedContainerService.HintSize="354,110" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
-                    <ui:UiElementExists.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f196b10b-8b8b-475a-a8ee-1f00bcd1521c" Selector="[string.Format(&quot;&lt;wnd app='chrome.exe' cls='Chrome*' title='Apollo' /&gt;&lt;ctrl role='grouping' text='{0}*' /&gt;&quot;, first_name)]" TimeoutMS="8000">
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:UiElementExists.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:UiElementExists>
-                </Sequence>
-              </ui:CommentOut.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:CommentOut>
-            <TryCatch DisplayName="Try Catch apollo window extraction" sap:VirtualizedContainerService.HintSize="634,1102.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_8">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <TryCatch.Try>
-                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser   Apollo'" sap:VirtualizedContainerService.HintSize="554,831.3333333333334" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="0dbf49b618b08caf4ff6cd739da03cdb" Selector="&lt;html app='chrome.exe' title='Apollo' /&gt;">
-                  <ui:BrowserScope.Body>
-                    <ActivityAction x:TypeArguments="x:Object">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                      </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,684" sap2010:WorkflowViewState.IdRef="Sequence_52">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="458,57.333333333333336" sap2010:WorkflowViewState.IdRef="MaximizeWindow_3" />
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click save to apollo" sap:VirtualizedContainerService.HintSize="458,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True" UnblockInput="True">
-                          <ui:Click.CursorPosition>
-                            <ui:CursorPosition Position="Center">
-                              <ui:CursorPosition.OffsetX>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetX>
-                              <ui:CursorPosition.OffsetY>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetY>
-                            </ui:CursorPosition>
-                          </ui:Click.CursorPosition>
-                          <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8f811591-b758-40e0-85d2-86e27e3643d4" InformativeScreenshot="409315fb317f560bf9b6ec01f571d7b7" Selector="&lt;wnd app='chrome.exe' cls='Chrome*' title='Apollo' /&gt;&lt;ctrl name='Add Contact - Apollo' role='document' /&gt;&lt;ctrl name='Save to Apollo' role='push button' /&gt;" TimeoutMS="7000" WaitForReady="COMPLETE" />
-                          </ui:Click.Target>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </ui:Click>
-                        <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="458,399.3333333333333" sap2010:WorkflowViewState.IdRef="RetryScope_12">
-                          <ui:RetryScope.ActivityBody>
-                            <ActivityAction>
-                              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="Sequence_83">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text email id" sap:VirtualizedContainerService.HintSize="354,110" sap2010:WorkflowViewState.IdRef="GetValue_2">
-                                  <ui:GetValue.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d87b5dde-23fc-4746-8a0f-887d58f48a11" Selector="&lt;ctrl role='grouping' text='Contact information' /&gt;&lt;nav up='2' /&gt;&lt;ctrl name='*' role='link' aastate='linked, opaque' idx='*' /&gt;" WaitForReady="COMPLETE">
-                                      <ui:Target.TimeoutMS>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:Target.TimeoutMS>
-                                    </ui:Target>
-                                  </ui:GetValue.Target>
-                                  <ui:GetValue.Value>
-                                    <OutArgument x:TypeArguments="x:String">[email_id]</OutArgument>
-                                  </ui:GetValue.Value>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:GetValue>
-                              </Sequence>
-                            </ActivityAction>
-                          </ui:RetryScope.ActivityBody>
-                          <ui:RetryScope.Condition>
-                            <ActivityFunc x:TypeArguments="x:Boolean" />
-                          </ui:RetryScope.Condition>
-                        </ui:RetryScope>
-                      </Sequence>
-                    </ActivityAction>
-                  </ui:BrowserScope.Body>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:BrowserScope>
-              </TryCatch.Try>
-              <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="558.6666666666666,23.333333333333332" sap2010:WorkflowViewState.IdRef="Catch`1_8">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ActivityAction x:TypeArguments="s:Exception">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                    </ActivityAction.Argument>
-                    <Sequence sap:VirtualizedContainerService.HintSize="512,738" sap2010:WorkflowViewState.IdRef="Sequence_73">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:RetryScope DisplayName="Retry Scope -- Click close apollo" sap:VirtualizedContainerService.HintSize="450,86" sap2010:WorkflowViewState.IdRef="RetryScope_4">
-                        <ui:RetryScope.ActivityBody>
-                          <ActivityAction>
-                            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="Sequence_56">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click close apollo" sap:VirtualizedContainerService.HintSize="354,110" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition Position="Center">
-                                    <ui:CursorPosition.OffsetX>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetX>
-                                    <ui:CursorPosition.OffsetY>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetY>
-                                  </ui:CursorPosition>
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e13ff556-73fb-4804-b0e5-0925f899ce26" Selector="&lt;wnd app='chrome.exe' cls='Chrome*' title='Apollo' /&gt;&lt;ctrl name='Apollo*' role='pane' /&gt;&lt;ctrl name='Close' role='push button' text='Close' /&gt;" TimeoutMS="5000" WaitForReady="NONE" />
-                                </ui:Click.Target>
-                              </ui:Click>
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:RetryScope.ActivityBody>
-                        <ui:RetryScope.Condition>
-                          <ActivityFunc x:TypeArguments="x:Boolean" />
-                        </ui:RetryScope.Condition>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:RetryScope>
-                      <ui:RetryScope DisplayName="Retry Scope opening apollo window" sap:VirtualizedContainerService.HintSize="450,86" sap2010:WorkflowViewState.IdRef="RetryScope_5">
-                        <ui:RetryScope.ActivityBody>
-                          <ActivityAction>
-                            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,275.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_57">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click apollo extension" sap:VirtualizedContainerService.HintSize="354,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition Position="Center">
-                                    <ui:CursorPosition.OffsetX>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetX>
-                                    <ui:CursorPosition.OffsetY>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetY>
-                                  </ui:CursorPosition>
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="77bbeaf7-d0aa-400d-a607-53c9c7a5647d" InformativeScreenshot="4729f5b4641cdf4739166c998761d526" Selector="&lt;wnd app='chrome.exe' cls='Chrome*' title='*LinkedIn*' /&gt;&lt;ctrl name='*LinkedIn*' role='pane' /&gt;&lt;ctrl name='Apollo Has access to this site' role='menu button' /&gt;">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:Click.Target>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </ui:Click>
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'text  Launch Window Mode'" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition Position="Center">
-                                    <ui:CursorPosition.OffsetX>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetX>
-                                    <ui:CursorPosition.OffsetY>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetY>
-                                  </ui:CursorPosition>
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4aab1a00-696d-48e5-b53e-65c84fcfbdfa" InformativeScreenshot="9de7783e07875daa2a51e42201aa273f" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;&lt;ctrl name='Apollo' role='document' /&gt;&lt;ctrl name='Launch Window Mode' role='text' /&gt;">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:Click.Target>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </ui:Click>
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:RetryScope.ActivityBody>
-                        <ui:RetryScope.Condition>
-                          <ActivityFunc x:TypeArguments="x:Boolean">
-                            <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'pane'" sap:VirtualizedContainerService.HintSize="334,107.33333333333333" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
-                              <ui:UiElementExists.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e8ea1cec-fed5-4c77-b792-ea71a145226d" InformativeScreenshot="e40ee8f0d845cce1b00933b84e2cfe6d" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Apollo' /&gt;&lt;ctrl name='Apollo*' role='pane' /&gt;&lt;ctrl role='pane' text='Apollo' /&gt;">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                  <ui:Target.WaitForReady>
-                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                  </ui:Target.WaitForReady>
-                                </ui:Target>
-                              </ui:UiElementExists.Target>
-                            </ui:UiElementExists>
-                          </ActivityFunc>
-                        </ui:RetryScope.Condition>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:RetryScope>
-                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser   Apollo'" sap:VirtualizedContainerService.HintSize="450,478" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="0dbf49b618b08caf4ff6cd739da03cdb" Selector="&lt;html app='chrome.exe' title='Apollo' /&gt;">
-                        <ui:BrowserScope.Body>
-                          <ActivityAction x:TypeArguments="x:Object">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,308" sap2010:WorkflowViewState.IdRef="Sequence_58">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="MaximizeWindow_4" />
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click save to apollo" sap:VirtualizedContainerService.HintSize="354,86" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True" UnblockInput="True">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition Position="Center">
-                                    <ui:CursorPosition.OffsetX>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetX>
-                                    <ui:CursorPosition.OffsetY>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetY>
-                                  </ui:CursorPosition>
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8f811591-b758-40e0-85d2-86e27e3643d4" InformativeScreenshot="409315fb317f560bf9b6ec01f571d7b7" Selector="&lt;wnd app='chrome.exe' cls='Chrome*' title='Apollo' /&gt;&lt;ctrl name='Add Contact - Apollo' role='document' /&gt;&lt;ctrl name='Save to Apollo' role='push button' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
-                                </ui:Click.Target>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </ui:Click>
-                              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text email id" sap:VirtualizedContainerService.HintSize="354,76.66666666666667" sap2010:WorkflowViewState.IdRef="GetValue_4">
-                                <ui:GetValue.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d87b5dde-23fc-4746-8a0f-887d58f48a11" Selector="&lt;ctrl role='grouping' text='Contact information' /&gt;&lt;nav up='2' /&gt;&lt;ctrl name='*' role='link' aastate='linked, opaque' idx='1' /&gt;" WaitForReady="COMPLETE">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                  </ui:Target>
-                                </ui:GetValue.Target>
-                                <ui:GetValue.Value>
-                                  <OutArgument x:TypeArguments="x:String">[email_id]</OutArgument>
-                                </ui:GetValue.Value>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </ui:GetValue>
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:BrowserScope.Body>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:BrowserScope>
-                    </Sequence>
-                  </ActivityAction>
-                </Catch>
-              </TryCatch.Catches>
-            </TryCatch>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="634,86" sap2010:WorkflowViewState.IdRef="CommentOut_18">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_74">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[apollo_page]" DisplayName="If apollo_page available" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="If_11">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_54">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_55">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                </Sequence>
-              </ui:CommentOut.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out -- cv outdated previous version" sap:VirtualizedContainerService.HintSize="634,86" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+            <ui:CommentOut DisplayName="Comment Out -- cv outdated previous version" sap:VirtualizedContainerService.HintSize="1198,86" sap2010:WorkflowViewState.IdRef="CommentOut_9">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_48">
                   <sap:WorkflowViewStateService.ViewState>
@@ -1979,7 +2442,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <Assign sap:VirtualizedContainerService.HintSize="634,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_13">
+            <Assign sap:VirtualizedContainerService.HintSize="1198,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_13">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[column_index_apollo_email]</OutArgument>
               </Assign.To>
@@ -1987,7 +2450,7 @@
                 <InArgument x:TypeArguments="x:Int32">[dt_transcationdata.Columns("Apollo Email").Ordinal]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="634,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_14">
+            <Assign sap:VirtualizedContainerService.HintSize="1198,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_14">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[alphabet_apollo_email]</OutArgument>
               </Assign.To>
@@ -1995,7 +2458,7 @@
                 <InArgument x:TypeArguments="x:String">[Chr(65+column_index_apollo_email)]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="634,86" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;writing in cell: &quot;+alphabet_apollo_email+(in_transcation_number+1).ToString]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1198,86" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;writing in cell: &quot;+alphabet_apollo_email+(in_transcation_number+1).ToString]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2003,10 +2466,10 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <If Condition="[email_id.Contains(&quot;@&quot;)]" DisplayName="If email id contains@" sap:VirtualizedContainerService.HintSize="634,702" sap2010:WorkflowViewState.IdRef="If_8">
+            <If Condition="[email_id.Contains(&quot;@&quot;)]" DisplayName="If email id contains@" sap:VirtualizedContainerService.HintSize="1198,76.66666666666667" sap2010:WorkflowViewState.IdRef="If_8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
